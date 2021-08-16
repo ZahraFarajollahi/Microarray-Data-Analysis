@@ -1,0 +1,3 @@
+Extracted insights:
+As the boxplot illustrates, the data is normalized.
+So, normalization is not required.
