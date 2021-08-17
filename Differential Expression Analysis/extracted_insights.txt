@@ -1,0 +1,5 @@
+xtracted insights:
+In this part, we are going to discuss briefly the knowledge discovered by this analysis.
+Here we extract the genes with adjusted p value < 0.05  and log fold change > 1 & log fold change < -1
+Then we perform gene ontology analysis using Enrichr (https://maayanlab.cloud/Enrichr/)
+we discovered that there are connections between extracted genes and lymphocytic leukemia.
