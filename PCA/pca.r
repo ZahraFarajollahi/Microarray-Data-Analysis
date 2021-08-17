@@ -19,7 +19,7 @@ ex = exprs(gset)
 ex = log2(ex + 1 )
 exprs(gset) = ex
 
-# Principle component analysis (PCA)
+# principal component analysis (PCA)
 # PCA for genes & plot it
 pc = prcomp(ex)
 pdf("Results/pc.pdf")
