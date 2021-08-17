@@ -41,3 +41,14 @@ tT = topTable(fit2, adjust="fdr", sort.by="B", number=Inf)
 # extract a subset of required columns and write the table
 tT = subset(tT, select=c("Gene.symbol","Gene.ID","adj.P.Val","logFC"))
 write.table(tT, "Results/cALL_CD10.txt", row.names=F, sep="\t", quote = F)
+
+# extract a subset of genes with adjusted_P_Value < 0.05 & log fold change more than 2_fold
+ALL.up = subset(tT, logFC > 1 & adj.P.Val < 0.05)
+ALL.up.genes = unique(as.character(strsplit2(ALL.up$Gene.symbol, "///")))
+write.table(ALL.up.genes, file = "Results/cALL_CD10-UP.txt", quote = F, row.names = F , col.names = F)
+ 
+#extract a subset of genes with adjusted_P_Value < 0.05 & log fold change less than 1/2_fold
+ALL.down = subset(tT, logFC <  -1 & adj.P.Val < 0.05)
+ALL.down.genes = unique(as.character(strsplit2(ALL.down$Gene.symbol, "///")))
+write.table(ALL.down.genes, file = "Results/cALL_CD10-down.txt", quote = F, row.names = F , col.names = F)
+
