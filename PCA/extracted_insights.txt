@@ -1,0 +1,5 @@
+Extracted insights:
+In this part, we are going to discuss briefly the knowledge discovered by this analysis.
+As the plots show, in principal component analysis, the PC1 has a weak ability to separate different samples.
+So we apply zero-mean normalization and again compute principal component analysis, and we earned a better distribution spread.
+Then compute principal component analysis for samples, and it separates cALL from healthy samples. Also, it separates Cell lines from others.
